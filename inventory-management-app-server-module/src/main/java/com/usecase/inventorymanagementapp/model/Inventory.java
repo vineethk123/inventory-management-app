@@ -18,8 +18,11 @@ public class Inventory {
     @Column(name = "status", nullable = false)
     String availabilityStatus;
 
-    @Column(name = "employeeName", nullable = false)
+    @Column(name = "employeeName")
     String employeName;
+
+    public Inventory() {
+    }
 
     public Inventory(Long id, String inventoryName, String availabilityStatus, String employeName) {
         this.id = id;

@@ -14,6 +14,13 @@ public class InventoryService {
     InventoryRepository inventoryRepository;
 
     public List<Inventory> getAvailableInventory() {
-        return inventoryRepository.findAllByAvailabilityStatus("Available");
+        return inventoryRepository.findAllByAvailabilityStatus("available");
     }
+
+    public List<Inventory> getAllInventory() {
+        return (List<Inventory>) inventoryRepository.findAll();
+    }
+
+
+
 }
